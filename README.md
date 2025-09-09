@@ -1,3 +1,43 @@
+# Usage
+
+```bash
+clone the repo
+cargo build
+```
+
+# run 
+
+```bash
+cargo run add <description> #to add task
+cargo run list #to list tasks
+cargo run done <id> #to mark task as done
+cargo run delete <id> #to delete task
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 📝 Explanation
 
 This project is like building your own to-do list app in the terminal. The idea is simple but powerful — you’ll combine Rust fundamentals (ownership, lifetimes, error handling) with real-world utilities (command-line parsing, file storage, and structured data handling).

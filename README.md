@@ -1,4 +1,9 @@
 # Usage
+
+```bash
+cargo install --git git@github.com:GHexxerBrdv/Task_manager.git
+```
+
 # run 
 
 ```bash

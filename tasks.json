@@ -1,7 +1,26 @@
 [
   {
     "id": 1,
-    "description": "Learn Rust",
-    "status": false
+    "description": "Rust",
+    "status": false,
+    "category": "Work",
+    "priority": "High",
+    "due_date": "2025-09-15"
+  },
+  {
+    "id": 2,
+    "description": "Solidity",
+    "status": false,
+    "category": "Work",
+    "priority": "High",
+    "due_date": "2025-09-15"
+  },
+  {
+    "id": 3,
+    "description": "Solidity",
+    "status": false,
+    "category": "Study",
+    "priority": "High",
+    "due_date": "2025-09-15"
   }
 ]

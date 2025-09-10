@@ -20,10 +20,25 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
-    Add { description: String },
-    List,
-    Done { id: u32 },
-    Delete { id: u32 },
+    Add {
+        description: String,
+        #[arg(short, long, default_value = "General")]
+        category: String,
+        #[arg(short, long, default_value = "Medium")]
+        priority: String,
+        #[arg(short, long)]
+        due: Option<String>,
+    },
+    List {
+        #[arg(short, long)]
+        category: String,
+    },
+    Done {
+        id: u32,
+    },
+    Delete {
+        id: u32,
+    },
 }
 
 fn main() {
@@ -47,8 +62,13 @@ fn main() {
     let cli = Cli::parse();
 
     match cli.command {
-        Command::Add { description } => commands::add_task(description),
-        Command::List => commands::list_tasks(),
+        Command::Add {
+            description,
+            category,
+            priority,
+            due,
+        } => commands::add_task(description, category, priority, due),
+        Command::List { category } => commands::list_tasks(Some(category)),
         Command::Done { id } => commands::mark_done(id),
         Command::Delete { id } => commands::delete_task(id),
     }

@@ -1,15 +1,16 @@
 # Usage
 
 ```bash
-clone the repo
+git clone https://github.com/username/repo_name.git
+cd repo_name
 cargo build
 ```
 
 # run 
 
 ```bash
-cargo run add <description> #to add task
-cargo run list #to list tasks
+cargo run -- add <description> -c <category> -p <priority> --due <due_date> #to add task
+cargo run list --c <category> #to list tasks
 cargo run done <id> #to mark task as done
 cargo run delete <id> #to delete task
 ```
@@ -26,53 +27,6 @@ cargo run delete <id> #to delete task
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-📝 Explanation
-
-This project is like building your own to-do list app in the terminal. The idea is simple but powerful — you’ll combine Rust fundamentals (ownership, lifetimes, error handling) with real-world utilities (command-line parsing, file storage, and structured data handling).
-
-It’s a great first project because:
-
-It’s practical (you’ll actually use it).
-
-It forces you to work with I/O, serialization, structs & enums, and error handling.
-
-It scales nicely — you can start with a super basic version and grow it into something almost production-ready.
-
-🎯 Core Features (MVP – Minimum Viable Product)
-
-Add Task – Add a task with a description.
-
-List Tasks – Show all tasks.
-
-Mark Task as Done – Mark a task as completed.
-
-Delete Task – Remove a task by ID.
-
-Persistence – Save/load tasks from a file (JSON).
-
-🚀 Extended Features (Level 2 – More Practical)
-
-Categories – Each task belongs to a category (Work, Personal, Study).
-
-Priorities – Low, Medium, High priority.
-
-Due Dates – Store deadlines using chrono crate.
-
-Search/Filter – Filter by category, priority, or completed status.
-
-Colored Output – Use colored crate to display high-priority tasks in red, completed ones in green.
 
 🔥 Advanced Features (Level 3 – Pushing Rust Concepts)
 

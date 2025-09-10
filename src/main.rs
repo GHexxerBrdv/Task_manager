@@ -11,7 +11,7 @@ mod task;
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "task")]
+#[command(name = "tik")]
 #[command(about = "A simple task manager", long_about = None)]
 struct Cli {
     #[command(subcommand)]

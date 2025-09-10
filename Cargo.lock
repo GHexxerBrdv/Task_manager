@@ -3,17 +3,6 @@
 version = 4
 
 [[package]]
-name = "Task_Manager"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "clap",
- "colored",
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "android_system_properties"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -361,6 +350,17 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "tik"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clap",
+ "colored",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

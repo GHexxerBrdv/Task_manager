@@ -22,5 +22,21 @@
     "category": "Study",
     "priority": "High",
     "due_date": "2025-09-15"
+  },
+  {
+    "id": 4,
+    "description": "Solidity",
+    "status": false,
+    "category": "Study",
+    "priority": "Low",
+    "due_date": "2025-09-15"
+  },
+  {
+    "id": 5,
+    "description": "Solidity",
+    "status": false,
+    "category": "Study",
+    "priority": "Medium",
+    "due_date": "2025-09-15"
   }
 ]

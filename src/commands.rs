@@ -1,4 +1,5 @@
 use crate::task::{Priority, Task, load_tasks, save_tasks};
+use colored::*;
 
 pub fn add_task(description: String, category: String, priority: String, due: Option<String>) {
     let mut tasks = load_tasks();
@@ -23,7 +24,9 @@ pub fn list_tasks(category: Option<String>) {
                 continue;
             }
         }
-        println!(
+
+        // Pick base text
+        let mut text = format!(
             "[{}] {} | Category: {} | Priority: {:?} | Due: {} | Status: {}",
             task.id,
             task.description,
@@ -32,6 +35,19 @@ pub fn list_tasks(category: Option<String>) {
             task.due_date.clone().unwrap_or("N/A".to_string()),
             if task.status { "Done" } else { "Pending" }
         );
+
+        // Apply colors
+        if task.status {
+            text = text.green().to_string();
+        } else {
+            match task.priority {
+                Priority::High => text = text.red().to_string(),
+                Priority::Medium => text = text.yellow().to_string(),
+                Priority::Low => text = text.normal().to_string(),
+            }
+        }
+
+        println!("{}", text);
     }
 }
 
